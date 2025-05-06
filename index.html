@@ -27,6 +27,10 @@
             transform: translateY(-1.5rem) scale(0.85);
             color: #9ca3af;
         }
+        .wine-label {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(251, 191, 36, 0.05) 100%);
+            border-left: 4px solid #f59e0b;
+        }
     </style>
 </head>
 <body class="font-serif bg-gray-50">
@@ -138,9 +142,6 @@
                         <p class="text-gray-600 mb-4">Molho de tomate San Marzano, mussarela de búfala D.O.P., manjericão fresco e azeite de oliva extra virgem.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-amber-600 font-bold text-xl">R$ 69,90</span>
-                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                Adicionar
-                            </button>
                         </div>
                     </div>
                     <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
@@ -162,9 +163,6 @@
                         <p class="text-gray-600 mb-4">Creme de trufas negras, queijo taleggio, presunto de Parma, rúcula selvagem e lascas de trufa fresca.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-amber-600 font-bold text-xl">R$ 119,90</span>
-                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                Adicionar
-                            </button>
                         </div>
                     </div>
                     <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
@@ -172,7 +170,7 @@
                             <h4 class="text-xl font-bold mb-2">Ingredientes Premium</h4>
                             <p class="text-sm">Trufas negras frescas da Umbria</p>
                             <p class="text-sm">Queijo Taleggio envelhecido 60 dias</p>
-                            <p class="text-sm">Presunto de Parma 24 meses</p>
+                            <p class="text-sm">Presuto de Parma 24 meses</p>
                             <p class="text-sm">Rúcula selvagem colhida na manhã</p>
                         </div>
                     </div>
@@ -186,9 +184,6 @@
                         <p class="text-gray-600 mb-4">Molho de tomate, camarões selvagens, lulas frescas, vieiras, mexilhões e um toque de limão siciliano.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-amber-600 font-bold text-xl">R$ 89,90</span>
-                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                Adicionar
-                            </button>
                         </div>
                     </div>
                     <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
@@ -210,9 +205,6 @@
                         <p class="text-gray-600 mb-4">Mussarela de búfala, gorgonzola dolce, parmigiano reggiano e queijo de cabra com mel de flores silvestres.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-amber-600 font-bold text-xl">R$ 79,90</span>
-                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                Adicionar
-                            </button>
                         </div>
                     </div>
                     <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
@@ -234,9 +226,6 @@
                         <p class="text-gray-600 mb-4">Molho de tomate, linguiça calabresa artesanal, cebola roxa, pimenta dedo-de-moça e orégano siciliano.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-amber-600 font-bold text-xl">R$ 74,90</span>
-                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                Adicionar
-                            </button>
                         </div>
                     </div>
                     <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
@@ -258,9 +247,6 @@
                         <p class="text-gray-600 mb-4">Creme de castanhas, abobrinha grelhada, berinjela defumada, tomate seco e pesto de rúcula com nozes.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-amber-600 font-bold text-xl">R$ 68,90</span>
-                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
-                                Adicionar
-                            </button>
                         </div>
                     </div>
                     <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
@@ -270,6 +256,160 @@
                             <p class="text-sm">Abobrinha orgânica grelhada</p>
                             <p class="text-sm">Berinjela defumada em casa</p>
                             <p class="text-sm">Tomate seco em azeite extra virgem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Vinhos Selecionados -->
+            <div class="mt-20">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Vinhos Selecionados</h2>
+                <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                    Harmonize sua experiência gastronômica com nossa seleção de vinhos premium, cuidadosamente escolhidos para complementar nossos sabores.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Vinho 1 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="wine-label p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold text-gray-800">Barolo DOCG</h3>
+                                <span class="bg-amber-600 text-white text-xs px-2 py-1 rounded-full">Piemonte</span>
+                            </div>
+                            <p class="text-gray-600 mb-4 italic">"Gaja" 2018 - Nebbiolo 100%</p>
+                            <p class="text-gray-600 mb-4">
+                                Um dos mais prestigiados vinhos italianos, com aromas de cereja, alcatrão e rosas, taninos elegantes e final longo.
+                            </p>
+                            <div class="flex justify-between items-center pt-4 border-t border-amber-100">
+                                <div>
+                                    <p class="text-sm text-gray-500">Taça</p>
+                                    <p class="text-amber-600 font-bold">R$ 89,90</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Garrafa</p>
+                                    <p class="text-amber-600 font-bold">R$ 349,90</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vinho 2 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="wine-label p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold text-gray-800">Chianti Classico</h3>
+                                <span class="bg-amber-600 text-white text-xs px-2 py-1 rounded-full">Toscana</span>
+                            </div>
+                            <p class="text-gray-600 mb-4 italic">"Fontodi" 2019 - Sangiovese 100%</p>
+                            <p class="text-gray-600 mb-4">
+                                Elegante e estruturado, com notas de ameixa seca, tabaco e especiarias. Harmoniza perfeitamente com pizzas de massa grossa.
+                            </p>
+                            <div class="flex justify-between items-center pt-4 border-t border-amber-100">
+                                <div>
+                                    <p class="text-sm text-gray-500">Taça</p>
+                                    <p class="text-amber-600 font-bold">R$ 59,90</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Garrafa</p>
+                                    <p class="text-amber-600 font-bold">R$ 229,90</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vinho 3 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="wine-label p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold text-gray-800">Amarone della Valpolicella</h3>
+                                <span class="bg-amber-600 text-white text-xs px-2 py-1 rounded-full">Vêneto</span>
+                            </div>
+                            <p class="text-gray-600 mb-4 italic">"Allegrini" 2017 - Corvina, Rondinella, Molinara</p>
+                            <p class="text-gray-600 mb-4">
+                                Vinho encorpado com aromas intensos de frutas secas, chocolate amargo e especiarias. Ideal para acompanhar pizzas com carnes.
+                            </p>
+                            <div class="flex justify-between items-center pt-4 border-t border-amber-100">
+                                <div>
+                                    <p class="text-sm text-gray-500">Taça</p>
+                                    <p class="text-amber-600 font-bold">R$ 79,90</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Garrafa</p>
+                                    <p class="text-amber-600 font-bold">R$ 299,90</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vinho 4 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="wine-label p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold text-gray-800">Brunello di Montalcino</h3>
+                                <span class="bg-amber-600 text-white text-xs px-2 py-1 rounded-full">Toscana</span>
+                            </div>
+                            <p class="text-gray-600 mb-4 italic">"Banfi" 2016 - Sangiovese Grosso 100%</p>
+                            <p class="text-gray-600 mb-4">
+                                Complexo e elegante, com taninos sedosos e aromas de cereja negra, baunilha e couro. Excelente para ocasiões especiais.
+                            </p>
+                            <div class="flex justify-between items-center pt-4 border-t border-amber-100">
+                                <div>
+                                    <p class="text-sm text-gray-500">Taça</p>
+                                    <p class="text-amber-600 font-bold">R$ 99,90</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Garrafa</p>
+                                    <p class="text-amber-600 font-bold">R$ 389,90</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vinho 5 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="wine-label p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold text-gray-800">Prosecco Superiore</h3>
+                                <span class="bg-amber-600 text-white text-xs px-2 py-1 rounded-full">Vêneto</span>
+                            </div>
+                            <p class="text-gray-600 mb-4 italic">"Bisol Jeio" Brut - Glera 100%</p>
+                            <p class="text-gray-600 mb-4">
+                                Espumante fresco e vibrante, com perlage fina e aromas de pêra, maçã verde e flor de acácia. Perfeito para começar a refeição.
+                            </p>
+                            <div class="flex justify-between items-center pt-4 border-t border-amber-100">
+                                <div>
+                                    <p class="text-sm text-gray-500">Taça</p>
+                                    <p class="text-amber-600 font-bold">R$ 49,90</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Garrafa</p>
+                                    <p class="text-amber-600 font-bold">R$ 179,90</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vinho 6 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="wine-label p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-bold text-gray-800">Moscato d'Asti</h3>
+                                <span class="bg-amber-600 text-white text-xs px-2 py-1 rounded-full">Piemonte</span>
+                            </div>
+                            <p class="text-gray-600 mb-4 italic">"Saracco" 2022 - Moscato Bianco 100%</p>
+                            <p class="text-gray-600 mb-4">
+                                Doce e aromático, com baixo teor alcoólico e bolhas delicadas. Notas de pêssego, lichia e flor de laranjeira. Ideal para sobremesas.
+                            </p>
+                            <div class="flex justify-between items-center pt-4 border-t border-amber-100">
+                                <div>
+                                    <p class="text-sm text-gray-500">Taça</p>
+                                    <p class="text-amber-600 font-bold">R$ 39,90</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Garrafa</p>
+                                    <p class="text-amber-600 font-bold">R$ 149,90</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -287,7 +427,7 @@
                     <div class="md:w-1/2 p-8 md:p-12">
                         <h3 class="text-3xl font-bold text-gray-800 mb-4">Torne-se um Membro</h3>
                         <p class="text-gray-600 mb-6">
-                            O Clube Abracio é um programa de fidelidade exclusivo para nossos clientes mais especiais. Como membro, você terá acesso a benefícios únicos e experiências gastronômicas diferenciadas.
+                            O Clube Abracio é um programa de fidelidade exclusivo para nossos clientes mais especiais. Como membro, você terá acesso a benefícios únicos e experiencias gastronômicas diferenciadas.
                         </p>
                         
                         <div class="mb-8">
