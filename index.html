@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abracio - Pizzaria Gourmet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+        }
+        .menu-item:hover .menu-overlay {
+            opacity: 1;
+        }
+        .menu-overlay {
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+        .floating-label {
+            transition: all 0.3s ease;
+        }
+        .form-input:focus + .floating-label,
+        .form-input:not(:placeholder-shown) + .floating-label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body class="font-serif bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center text-white font-bold text-xl mr-3">A</div>
+                    <h1 class="text-2xl font-bold text-gray-800">Abracio</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-amber-600 transition">Home</a>
+                    <a href="#historia" class="text-gray-800 hover:text-amber-600 transition">Nossa História</a>
+                    <a href="#cardapio" class="text-gray-800 hover:text-amber-600 transition">Cardápio</a>
+                    <a href="#clube" class="text-gray-800 hover:text-amber-600 transition">Clube Abracio</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-gray-800 hover:text-amber-600 transition">Home</a>
+                <a href="#historia" class="block py-2 text-gray-800 hover:text-amber-600 transition">Nossa História</a>
+                <a href="#cardapio" class="block py-2 text-gray-800 hover:text-amber-600 transition">Cardápio</a>
+                <a href="#clube" class="block py-2 text-gray-800 hover:text-amber-600 transition">Clube Abracio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Abracio</h1>
+            <p class="text-xl md:text-2xl text-white mb-8">A autêntica pizza italiana com um toque brasileiro</p>
+            <a href="#cardapio" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+                Ver Cardápio
+            </a>
+        </div>
+    </section>
+
+    <!-- Nossa História Section -->
+    <section id="historia" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Nossa História</h2>
+            
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1600628421060-939639517883?ixlib=rb-4.0.3" alt="Família italiana" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">As Origens Italianas</h3>
+                    <p class="text-gray-600 mb-4">
+                        Em 1952, a família Rossi deixou a pequena cidade de Nápoles, na Itália, em busca de novas oportunidades no Brasil. Com eles, trouxeram não apenas suas malas, mas também séculos de tradição na arte de fazer pizza.
+                    </p>
+                    <p class="text-gray-600">
+                        O patriarca, Giovanni Rossi, era um mestre pizzaiolo que aprendera o ofício com seu pai e seu avô. Suas receitas, guardadas a sete chaves, eram o segredo da massa perfeita - crocante por fuera, macia por dentro, com aquele sabor inconfundível que só o fermento natural e o tempo certo de descanso podem proporcionar.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row-reverse items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-10">
+                    <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3" alt="Primeira pizzaria" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">A Chegada ao Brasil</h3>
+                    <p class="text-gray-600 mb-4">
+                        Chegando em São Paulo, a família começou humildemente, vendendo pizzas na feira do bairro. Aos poucos, a fama da "pizza dos italianos" foi crescendo, até que em 1968 inauguraram o primeiro restaurante da família Rossi.
+                    </p>
+                    <p class="text-gray-600">
+                        O nome "Abracio" foi escolhido como uma homenagem ao abraço caloroso que receberam do povo brasileiro e também porque, como dizia dona Maria, esposa de Giovanni: "uma boa pizza é como um abraço - acolhedora, reconfortante e feita com amor".
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3" alt="Pizzaria atual" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">A Tradição Continua</h3>
+                    <p class="text-gray-600 mb-4">
+                        Hoje, na terceira geração, a Abracio mantém viva a tradição familial, combinando as técnicas ancestrais com ingredientes brasileiros de altíssima qualidade. Cada pizza que sai do nosso forno a lenha carrega não apenas os melhores sabores, mas também toda a história e amor da família Rossi.
+                    </p>
+                    <p class="text-gray-600">
+                        Nossos clientes não são apenas clientes - são parte da nossa família. E é com esse espírito que continuamos, década após década, a servir o que há de melhor na arte da pizza.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cardápio Section -->
+    <section id="cardapio" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Cardápio Gourmet</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pizza 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3" alt="Pizza Margherita" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Margherita D.O.P.</h3>
+                        <p class="text-gray-600 mb-4">Molho de tomate San Marzano, mussarela de búfala D.O.P., manjericão fresco e azeite de oliva extra virgem.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-xl">R$ 69,90</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <div class="text-white p-4 text-center">
+                            <h4 class="text-xl font-bold mb-2">Ingredientes Premium</h4>
+                            <p class="text-sm">Tomate San Marzano importado da Itália</p>
+                            <p class="text-sm">Mussarela de búfala certificada D.O.P.</p>
+                            <p class="text-sm">Manjericão colhido diariamente</p>
+                            <p class="text-sm">Azeite extra virgem de primeira prensa</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pizza 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-4.0.3" alt="Pizza Trufada" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Tartufo Nero</h3>
+                        <p class="text-gray-600 mb-4">Creme de trufas negras, queijo taleggio, presunto de Parma, rúcula selvagem e lascas de trufa fresca.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-xl">R$ 119,90</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <div class="text-white p-4 text-center">
+                            <h4 class="text-xl font-bold mb-2">Ingredientes Premium</h4>
+                            <p class="text-sm">Trufas negras frescas da Umbria</p>
+                            <p class="text-sm">Queijo Taleggio envelhecido 60 dias</p>
+                            <p class="text-sm">Presunto de Parma 24 meses</p>
+                            <p class="text-sm">Rúcula selvagem colhida na manhã</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pizza 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3" alt="Pizza Frutos do Mar" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Frutti di Mare</h3>
+                        <p class="text-gray-600 mb-4">Molho de tomate, camarões selvagens, lulas frescas, vieiras, mexilhões e um toque de limão siciliano.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-xl">R$ 89,90</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <div class="text-white p-4 text-center">
+                            <h4 class="text-xl font-bold mb-2">Ingredientes Premium</h4>
+                            <p class="text-sm">Camarões selvagens do litoral nordestino</p>
+                            <p class="text-sm">Lulas frescas pescadas no dia</p>
+                            <p class="text-sm">Vieiras importadas da Bretanha</p>
+                            <p class="text-sm">Limão siciliano orgânico</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pizza 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?ixlib=rb-4.0.3" alt="Pizza 4 Queijos" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Quattro Formaggi</h3>
+                        <p class="text-gray-600 mb-4">Mussarela de búfala, gorgonzola dolce, parmigiano reggiano e queijo de cabra com mel de flores silvestres.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-xl">R$ 79,90</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <div class="text-white p-4 text-center">
+                            <h4 class="text-xl font-bold mb-2">Ingredientes Premium</h4>
+                            <p class="text-sm">Mussarela de búfala D.O.P.</p>
+                            <p class="text-sm">Gorgonzola Dolce envelhecido</p>
+                            <p class="text-sm">Parmigiano Reggiano 36 meses</p>
+                            <p class="text-sm">Queijo de cabra artesanal</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pizza 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3" alt="Pizza Calabresa" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Calabrese Artigianale</h3>
+                        <p class="text-gray-600 mb-4">Molho de tomate, linguiça calabresa artesanal, cebola roxa, pimenta dedo-de-moça e orégano siciliano.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-xl">R$ 74,90</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <div class="text-white p-4 text-center">
+                            <h4 class="text-xl font-bold mb-2">Ingredientes Premium</h4>
+                            <p class="text-sm">Linguiça calabresa artesanal</p>
+                            <p class="text-sm">Cebola roxa orgânica</p>
+                            <p class="text-sm">Pimenta dedo-de-moça fresca</p>
+                            <p class="text-sm">Orégano siciliano desidratado</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pizza 6 - Verde Vita (Atualizada) -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 menu-item relative">
+                    <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?ixlib=rb-4.0.3" alt="Pizza Vegana Verde Vita" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Verde Vita</h3>
+                        <p class="text-gray-600 mb-4">Creme de castanhas, abobrinha grelhada, berinjela defumada, tomate seco e pesto de rúcula com nozes.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-xl">R$ 68,90</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full transition duration-300">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                        <div class="text-white p-4 text-center">
+                            <h4 class="text-xl font-bold mb-2">Ingredientes Premium</h4>
+                            <p class="text-sm">Creme de castanhas artesanal</p>
+                            <p class="text-sm">Abobrinha orgânica grelhada</p>
+                            <p class="text-sm">Berinjela defumada em casa</p>
+                            <p class="text-sm">Tomate seco em azeite extra virgem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clube Abracio Section -->
+    <section id="clube" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Clube Abracio</h2>
+            
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-amber-50 to-amber-100 rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Torne-se um Membro</h3>
+                        <p class="text-gray-600 mb-6">
+                            O Clube Abracio é um programa de fidelidade exclusivo para nossos clientes mais especiais. Como membro, você terá acesso a benefícios únicos e experiências gastronômicas diferenciadas.
+                        </p>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-xl font-bold text-gray-800 mb-3">Benefícios Exclusivos:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                                    <span>Rodízio gourmet ilimitado toda quinta-feira</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                                    <span>10% de desconto em todas as compras</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                                    <span>Acesso antecipado a novos sabores</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                                    <span>Degustações mensais de vinhos selecionados</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                                    <span>Workshops com nossos chefs</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-inner">
+                            <p class="text-gray-600 italic">
+                                "Ser membro do Clube Abracio transformou minha experiência gastronômica. Além dos descontos, poder participar dos eventos exclusivos me fez conhecer ainda mais o mundo da pizza artesanal." - <span class="font-semibold">Carlos M., membro desde 2019</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-amber-600 p-8 md:p-12 flex items-center">
+                        <div class="w-full">
+                            <h3 class="text-2xl font-bold text-white mb-6">Assine Agora</h3>
+                            
+                            <form class="space-y-4">
+                                <div class="relative">
+                                    <input type="text" id="nome" class="form-input w-full px-4 py-2 border-b border-amber-300 bg-transparent text-white placeholder-transparent focus:outline-none" placeholder="Nome Completo">
+                                    <label for="nome" class="floating-label absolute left-4 top-2 text-amber-200 pointer-events-none">Nome Completo</label>
+                                </div>
+                                
+                                <div class="relative">
+                                    <input type="email" id="email" class="form-input w-full px-4 py-2 border-b border-amber-300 bg-transparent text-white placeholder-transparent focus:outline-none" placeholder="E-mail">
+                                    <label for="email" class="floating-label absolute left-4 top-2 text-amber-200 pointer-events-none">E-mail</label>
+                                </div>
+                                
+                                <div class="relative">
+                                    <input type="tel" id="telefone" class="form-input w-full px-4 py-2 border-b border-amber-300 bg-transparent text-white placeholder-transparent focus:outline-none" placeholder="Telefone">
+                                    <label for="telefone" class="floating-label absolute left-4 top-2 text-amber-200 pointer-events-none">Telefone</label>
+                                </div>
+                                
+                                <div class="pt-4">
+                                    <button type="submit" class="w-full bg-white text-amber-600 hover:bg-gray-100 font-bold py-3 px-4 rounded-full transition duration-300">
+                                        Tornar-se Membro
+                                    </button>
+                                </div>
+                                
+                                <p class="text-amber-200 text-sm">
+                                    Ao assinar, você concorda com nossos Termos de Uso e Política de Privacidade. A assinatura tem cost mensal de R$ 49,90.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-white font-bold text-lg mr-3">A</div>
+                        <h3 class="text-xl font-bold">Abracio</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        A autêntica pizza italiana com um toque brasileiro. Tradição familiar desde 1968.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Horário de Funcionamento</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Terça a Quinta: 18h - 23h</li>
+                        <li>Sexta e Sábado: 18h - 00h</li>
+                        <li>Domingo: 18h - 22h</li>
+                        <li>Segunda: Fechado</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-amber-600"></i>
+                            <span>Rua das Oliveiras, 123<br>Jardim Itália - São Paulo/SP</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-amber-600"></i>
+                            <span>(11) 1234-5678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-amber-600"></i>
+                            <span>contato@abracio.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-amber-600 flex items-center justify-center transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-amber-600 flex items-center justify-center transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-amber-600 flex items-center justify-center transition duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <h4 class="text-lg font-bold mt-6 mb-4">Formas de Pagamento</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <div class="bg-gray-800 px-2 py-1 rounded text-xs">Visa</div>
+                        <div class="bg-gray-800 px-2 py-1 rounded text-xs">Mastercard</div>
+                        <div class="bg-gray-800 px-2 py-1 rounded text-xs">Amex</div>
+                        <div class="bg-gray-800 px-2 py-1 rounded text-xs">Pix</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Abracio Pizzaria Gourmet. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
